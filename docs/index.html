@@ -9,14 +9,41 @@
     <meta name="description" content="Книга-игра 'Теперь Ты Стальная Крыса'">
     <meta name="keywords" content="Гарри Гаррисон, Стальная Крыса, Крыса из Нержавеющей Стали, книга-игра">
     <style>
-        section, :target ~ section.introduction {
-            display: none;
-            max-width: 1500px;
-            margin:auto
+         section {
+            max-width: 1200px;
+            margin:auto;
+            text-align: center;
         }
-        
-        section:target, section.introduction {
+        section, :target ~ #welcome {
+            display: none;
+        }
+        section:target, #welcome {
             display: block;
+        }
+
+        #welcome {
+            text-align: center;
+        }
+
+        .goto {
+            text-decoration: none;
+            border: 1px solid darkseagreen;
+            background-color: lightgreen;
+            padding: 3px 5px;
+            display: inline-block;
+            min-width: 35px;
+            text-align: center;
+            color: darkgreen;
+        }
+        .section-title {
+            border-radius: 50%;
+            border: 1px solid black;
+            background-color: white;
+            color: black;
+            display: inline-block;
+            margin:auto;
+            padding:10px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -3276,7 +3303,7 @@
             <p>Если не знаешь ответа, то на <a class="goto" href="#p291">291</a>.</p>
         </div>
     </section>
-    <a name="introduction"></a><section class="introduction" id="introduction"></a><section class="introduction"></a>
+    <section id="introduction"></a>
         <div class="section-content">
             <p>Добро пожаловать!</p>
             <p>Эй, ты. Да, да, ты! Шаг вперед.</p>
@@ -3296,6 +3323,14 @@
             <p>НЕМЕДЛЕННО ОТПРАВЛЯЙСЯ К <a class="goto" href="#p30">ТРИДЦАТОЙ</a> ГЛАВЕ!</p>
         </div>
     </section>    
+    <section id="welcome">
+        <h1>Теперь Ты Стальная Крыса</h1>
+        <h2>Гарри Гаррисон</h2>
+        <h3>Книга-игра</h3>
+        <div>
+            <a class="goto">Вперед!</a>
+        </div>
+    </section>
 </body>
 
 </html>
