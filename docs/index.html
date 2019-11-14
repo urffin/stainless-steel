@@ -13,10 +13,13 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
+            display: flex;
+            flex-direction: column;
         }
         section {
             max-width: 1200px;
-            margin:auto;
+            margin: auto;
+            order: 3;
         }
         /*section, :target ~ #welcome {
             display: none;
@@ -27,6 +30,10 @@
 
         #welcome {
             text-align: center;
+            order: 1;
+        }
+        #introduction {
+            order: 2;
         }
 
         .goto {
