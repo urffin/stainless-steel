@@ -47,15 +47,18 @@ h2,
 .menu-open {
     display: none;
 }
+.menu-open:not(:indeterminate) + .sidebar{
+    transition: transform ease-in-out .3s;
+}
 .menu-open:checked + .sidebar{
     transform: translateX(0);
+    
 }
 .sidebar {
     position: absolute;
     left: 0;
     top: 0;
     transform: translateX(-100%);
-    transition: transform ease-in-out .4s;
     background-color: #000;
     width: 300px;
 }
