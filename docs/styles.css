@@ -4,7 +4,7 @@ body {
 }
 section {
     max-width: 1200px;
-    margin:auto;
+    margin: auto;
 }
 
 .goto {
@@ -17,8 +17,10 @@ section {
     text-align: center;
     color: #004c00;
 }
-h1, h2, .section-title {
-    font-family: 'Times New Roman', Times, serif;
+h1,
+h2,
+.section-title {
+    font-family: "Times New Roman", Times, serif;
 }
 .section-title {
     border-radius: 5px;
@@ -32,13 +34,73 @@ h1, h2, .section-title {
 .poem {
     font-style: italic;
     text-align: center;
-    font-family: 'Courier New', monospace;
+    font-family: "Courier New", monospace;
 }
-.esperanto{
-    font-family: 'Courier New', monospace;
+.esperanto {
+    font-family: "Courier New", monospace;
     border-bottom: 1px solid #004c00;
     border-top: 1px solid #004c00;
     border-radius: 5px;
     padding: 20px 10px;
     text-align: center;
+}
+.menu-open {
+    display: none;
+}
+.menu-open:checked + .sidebar{
+    transform: translateX(0);
+}
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform ease-in-out .4s;
+    background-color: #000;
+    width: 300px;
+}
+.nav {
+    max-height: 100vh;
+    overflow: auto;
+}
+.menu-header {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    color: white;
+    border-bottom: 1px whitesmoke;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+}
+.menu a {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    color: lightgrey;
+}
+.menu a:hover {
+    color: white;
+}
+.menu a::before {
+    content: "Глава ";
+}
+.menu-button {
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+}
+
+.menu-open:checked + .sidebar .menu-button::before {
+    content: 'X';
+    font-size: xx-large;
+}
+.menu-button::before {
+    content: 'Оглавление';
 }
